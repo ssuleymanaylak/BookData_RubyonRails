@@ -1,0 +1,25 @@
+<div class="w-4/5 mx-auto">
+  <h1 class="mx-auto text-2xl w-fit">The Library Main Page</h1>
+  <%= turbo_frame_tag "books", src: books_index_path do %>
+    <table class="animate-pulse">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Publisher</th>
+          <th>Category</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% (1..10).each do %>
+          <tr>
+            <td><div class="bg-slate-200 h-8 rounded w-64"></div></td>
+            <td><div class="bg-slate-200 h-8 rounded w-64"></div></td>
+            <td><div class="bg-slate-200 h-8 rounded w-64"></div></td>
+            <td><div class="bg-slate-200 h-8 rounded w-64"></div></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% end %>
+</div>
